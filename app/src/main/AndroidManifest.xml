@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mtouch.caddie">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.mtouch.ksnet.dpt.MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="theme, icon, label">
+        <activity android:name=".OrderPaymentActivity" android:exported="true"></activity>
+        <activity android:name=".SchedualDetailActivity" android:exported="true"/>
+        <activity android:name=".OrderDirectConfirmActivity" android:exported="true"/>
+        <activity android:name=".LoadingActivity" android:exported="false"/>
+        <activity
+            android:name=".OrderPaymentCompleteActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"/>
+        <activity
+            android:name=".OrderDirectPaymentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name=".SchedualCompleActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"/>
+        <activity
+            android:name=".SchedualApplyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name=".SchedualActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"/>
+        <activity
+            android:name=".AmountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"/>
+        <activity
+            android:name=".OrderConfirmActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name=".OrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"/>
+        <activity
+            android:name=".auth.MchtApplyInfo2Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name=".auth.MchtApplyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name=".auth.MchtApplyInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name=".IntroActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TempActivity" android:exported="true"/>
+        <activity
+            android:name=".auth.SignUpActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name=".auth.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.ReceiptPrintActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.LocalHistoryActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.HiddenOptionActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.ReceiptActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.TotalActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.InfomationActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.DirectPaymentActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.SettingActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.LoadingActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.PaymentCompleteActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.HistoryDetailActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.CashPaymentActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.HistoryActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.CreditPaymentActivity" android:exported="true"/>
+        <activity
+            android:name="com.mtouch.ksnet.dpt.design.auth.AuthFirstActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"/>
+        <activity
+            android:name=".auth.AuthSMSActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.auth.LoginCompleteActivity" android:exported="true"/>
+        <activity
+            android:name="com.mtouch.ksnet.dpt.design.OldMainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.design.IntroActivity" android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.ks03.PermissionActivity" android:exported="true"/>
+        <activity
+            android:name="com.mtouch.ksnet.dpt.ks03.bluetooth.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:exported="true"/>
+        <activity
+            android:name="com.mtouch.ksnet.dpt.ks03.bluetooth.DeviceRegistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:exported="true"/>
+        <activity android:name="com.mtouch.ksnet.dpt.ErrorActivity" android:exported="false"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"
+            android:exported="true"/>
+
+        <service
+            android:name="com.mtouch.ksnet.dpt.ks03.pay.CompleteCheckService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="dataSync" />
+
+        <receiver
+            android:name="com.mtouch.ksnet.dpt.ks03.pay.CompleteCheckReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name="com.mtouch.ksnet.dpt.ks03.RestartReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.mtouch.ksnet.dpt.ks03.pay.DirectPaymentActivity" android:exported="false"/> <!-- com.aynil.ksnet.dpt.sample.SampleMainActivity -->
+        <!--
+ com.aynil.parksuwon.myapplication03.pay.ksr03.MtouchPayKsnet
+                android:launchMode="singleTask"
+                android:alwaysRetainTaskState="true"
+        -->
+        <activity
+            android:name="com.mtouch.ksnet.dpt.ks03.pay.ksr03.MtouchPayKsnet"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:exported="true"/>
+        <activity
+            android:name="com.mtouch.ksnet.dpt.action.process.view.PayCreditSign"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"
+            android:exported="true"/>
+        <activity
+            android:name="com.mtouch.ksnet.dpt.sample.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:exported="true"/>
+        <activity
+            android:name="com.mtouch.ksnet.dpt.ks03.pay.httpcomunity.WebCheckActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mtouch.ksnet.dpt.action.PayResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <activity android:name="com.cyrexpay.parksuwon.myapplication.pay.CyrexPayKsnet" /> -->
+        <service
+            android:name="com.nordicsemi.nrfUARTv2.UartService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="connectedDevice" /> <!-- BlueTooth Print -->
+        <activity
+            android:name="zj.com.cn.bluetooth.sdk.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:exported="true"/>
+        <activity
+            android:name="zj.com.cn.bluetooth.sdk.DeviceListDialogtActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <service
+            android:name=".firebase.CaddieFirebaseMessagingService"
+            android:exported="true"
+            android:foregroundServiceType="dataSync">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_mtouch_logo" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="google_analytics_adid_collection_enabled"
+            android:value="false" />
+    </application>
+
+</manifest>

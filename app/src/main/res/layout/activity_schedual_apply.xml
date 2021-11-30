@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".OrderActivity">
+
+    <include layout="@layout/header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="37dp"
+            android:paddingBottom="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ns_acr"
+                android:letterSpacing="-0.05"
+                android:lineSpacingExtra="24sp"
+                android:text="예약 날짜"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:id="@+id/dayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/yearTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_rect_grey_shape_radius_7"
+                    android:drawableEnd="@drawable/down_arrow"
+                    android:drawablePadding="-30dp"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:text="2021 년"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="9.5dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/monthTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_rect_grey_shape_radius_7"
+                    android:drawableEnd="@drawable/down_arrow"
+                    android:drawablePadding="-45dp"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:text="5 월"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="9.5dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/dayTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_rect_grey_shape_radius_7"
+                    android:drawableEnd="@drawable/down_arrow"
+                    android:drawablePadding="-45dp"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:text="4 일"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:fontFamily="@font/ns_acr"
+                android:letterSpacing="-0.05"
+                android:lineSpacingExtra="24sp"
+                android:text="예약 시간"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hourTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_rect_grey_shape_radius_7"
+                    android:drawableEnd="@drawable/down_arrow"
+                    android:drawablePadding="-30dp"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:text="12 시"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="9.5dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/minuteTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_rect_grey_shape_radius_7"
+                    android:drawableEnd="@drawable/down_arrow"
+                    android:drawablePadding="-45dp"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:text="30 분"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="9.5dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_rect_grey_shape_radius_7"
+                    android:drawableEnd="@drawable/down_arrow"
+                    android:drawablePadding="-45dp"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:text="4 일"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="12dp"
+                    android:visibility="invisible" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="37.9dp"
+                android:background="@color/pinkish_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:fontFamily="@font/ns_acr"
+                android:letterSpacing="-0.05"
+                android:lineSpacingExtra="24sp"
+                android:text="골프장"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/placeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="3.5dp"
+                android:background="@drawable/round_rect_grey_shape_radius_7"
+                android:gravity="end|center_vertical"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:paddingEnd="16dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                tools:text="휘슬링팍 CC" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/ns_acr"
+                android:letterSpacing="-0.05"
+                android:lineSpacingExtra="24sp"
+                android:text="코스명"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/courseEditText"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="3.5dp"
+                android:background="@drawable/round_rect_grey_shape_radius_7"
+                android:gravity="end|center_vertical"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:paddingEnd="16dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                tools:text="휘슬링팍 CC" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="37.9dp"
+                android:background="@color/pinkish_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="13.6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:letterSpacing="-0.05"
+                    android:lineSpacingExtra="24sp"
+                    android:text="예약자명"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+
+
+                <EditText
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:nextFocusDown="@id/name1EditText"
+                    android:hint="예약자를 입력하세요."
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="7dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ns_acr"
+                    android:letterSpacing="-0.05"
+                    android:lineSpacingExtra="24sp"
+                    android:text="인원수"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+
+
+                <ImageView
+                    android:id="@+id/minusImageView"
+                    android:layout_width="24.5dp"
+                    android:layout_height="24.5dp"
+                    android:src="@drawable/ic_icon_minus" />
+
+                <TextView
+                    android:id="@+id/countTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="16dp"
+                    android:fontFamily="@font/ns_acr"
+                    android:gravity="center"
+                    android:letterSpacing="-0.05"
+                    android:lineSpacingExtra="24dp"
+                    android:text="1"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/plusImageView"
+                    android:layout_width="24.5dp"
+                    android:layout_height="24.5dp"
+                    android:src="@drawable/ic_icon_plus" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:letterSpacing="-0.05"
+                    android:lineSpacingExtra="24sp"
+                    android:text="전화번호"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_rect_pale_blue_shape_radius_5"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="7dp">
+
+                <EditText
+                    android:id="@+id/name1EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:hint="성함"
+                    android:nextFocusDown="@id/phoneNumber1EditText"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/phoneNumber1EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.4"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:hint="전화번호를 입력하세요."
+                    android:nextFocusDown="@id/name2EditText"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/phoneNumber2Layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingHorizontal="7dp">
+
+                <View
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/pinkish_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/name2EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:background="@null"
+                        android:gravity="end|center_vertical"
+                        android:hint="성함"
+                        android:nextFocusDown="@id/phoneNumber2EditText"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/phoneNumber2EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.4"
+                        android:background="@null"
+                        android:gravity="end|center_vertical"
+                        android:hint="전화번호를 입력하세요."
+                        android:nextFocusDown="@id/name3EditText"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/phoneNumber3Layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingHorizontal="7dp">
+
+                <View
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/pinkish_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/name3EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:hint="성함"
+                    android:nextFocusDown="@id/phoneNumber3EditText"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/phoneNumber3EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.4"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:hint="전화번호를 입력하세요."
+                    android:nextFocusDown="@id/name4EditText"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/phoneNumber4Layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingHorizontal="7dp">
+
+                <View
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/pinkish_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/name4EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:nextFocusDown="@id/phoneNumber4EditText"
+                    android:hint="성함"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/phoneNumber4EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.4"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:hint="전화번호를 입력하세요."
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout><!--scrollview layout-->
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="35dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_grey_line_shape"
+            android:fontFamily="@font/ns_acb"
+            android:text="취소"
+            android:textColor="@color/greyish_brown_two"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_green_shape_radius_7"
+            android:fontFamily="@font/ns_acb"
+            android:text="등록"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

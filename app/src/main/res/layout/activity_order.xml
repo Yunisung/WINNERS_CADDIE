@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".OrderActivity">
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/header_layout" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLayout"
+        android:layout_below="@id/titleLayout"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <!--            상단-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/round_rect_denim_gradient_shape_radius_12"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ns_acr"
+                android:text="총 결제 금액"
+                android:textColor="@color/white"
+                android:textSize="17.5dp" />
+
+            <TextView
+                android:id="@+id/totalAmountTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ns_aceb"
+                android:gravity="end"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:text="0 원"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="9.3dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/tipCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.5dp"
+                    android:button="@drawable/checkbox_greeny"
+                    android:fontFamily="@font/ns_acr"
+                    android:paddingStart="7.4dp"
+                    android:text="팁포함"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--금액-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31.5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ns_acr"
+                android:gravity="center_horizontal"
+                android:text="라운딩 금액"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="17.5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/amountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="18dp"
+                    tools:text="100,000" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/pinkish_grey" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <!--            팁-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ns_acr"
+                android:gravity="center_horizontal"
+                android:text="팁"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="17.5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/tipEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="18dp"
+                    tools:text="100,000" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/pinkish_grey" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+        <!--인원수-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ns_acr"
+                android:gravity="center_horizontal"
+                android:text="인원수"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/countSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:entries="@array/count"
+                android:gravity="right" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/detailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="3dp"
+            android:layout_marginTop="11.5dp"
+            android:background="@drawable/round_rect_grey_top_radius_12_shape"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ns_acr"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="26dp"
+                android:text="상세내역 보기 "
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/detailLayoutIconImageView"
+                android:layout_width="12dp"
+                android:layout_height="7.3dp"
+                android:layout_marginStart="3.2dp"
+                android:src="@drawable/ic_next" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/detailContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/round_rect_white_bottom_radius_12_shape"
+            android:elevation="3dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--            골프장명-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="5.5dp"
+                    android:paddingEnd="19.5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="center_horizontal"
+                        android:text="골프장명"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/placeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="center_vertical|end"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <!--            예약자명-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/white_two"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="5.5dp"
+                    android:paddingEnd="19.5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="center_horizontal"
+                        android:text="예약자명"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+
+                    <EditText
+                        android:id="@+id/nameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="center_vertical|end"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="홍길동"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <!--          예약일자  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="5.5dp"
+                    android:paddingEnd="19.5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="center_horizontal"
+                        android:text="예약일자"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/timeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="center_vertical|end"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="2021-04-15  14:52"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <!--            코스-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/white_two"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="5.5dp"
+                    android:paddingEnd="19.5dp">
+
+                    <TextView
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="center_horizontal"
+                        android:letterSpacing="-0.05"
+                        android:lineSpacingExtra="24dp"
+                        android:text="코  스  명"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/courseNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="center_vertical|end"
+                        android:inputType="text"
+                        android:nextFocusDown="@id/name1EditText"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="test"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <!--전화번호-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="5.5dp"
+                    android:paddingEnd="19.5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="center_horizontal"
+                        android:text="전화번호"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <!--전화번호1-->
+                <LinearLayout
+                    android:id="@+id/number1Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/white_two"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="5.5dp"
+                    android:paddingEnd="19.5dp">
+
+                    <EditText
+                        android:id="@+id/name1EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="17dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:nextFocusDown="@id/number1EditText"
+                        android:gravity="end|center_vertical"
+                        android:hint="성함"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/number1EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="center"
+                        android:nextFocusDown="@id/name2EditText"
+                        android:hint="전화번호"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <CheckBox
+                        android:id="@+id/tip1Checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:button="@drawable/checkbox_greeny"
+                        android:fontFamily="@font/ns_acr"
+                        android:paddingStart="7.4dp"
+                        android:text="팁포함"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="13dp" />
+                </LinearLayout>
+                <!--전화번호2-->
+                <LinearLayout
+                    android:id="@+id/number2Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="5.5dp"
+                    android:paddingEnd="19.5dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/name2EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="17dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="end|center_vertical"
+                        android:nextFocusDown="@id/number2EditText"
+                        android:hint="성함"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp"
+                        tools:text="홍길동" />
+
+
+                    <EditText
+                        android:id="@+id/number2EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="center"
+                        android:hint="전화번호"
+                        android:nextFocusDown="@id/name3EditText"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp"
+                        tools:text="010 1234 1234" />
+
+                    <CheckBox
+                        android:id="@+id/tip2Checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:button="@drawable/checkbox_greeny"
+                        android:fontFamily="@font/ns_acr"
+                        android:paddingStart="7.4dp"
+                        android:text="팁포함"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="13dp" />
+                </LinearLayout>
+                <!--전화번호3-->
+                <LinearLayout
+                    android:id="@+id/number3Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/white_two"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="5.5dp"
+                    android:paddingEnd="19.5dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/name3EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="17dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:nextFocusDown="@id/number3EditText"
+                        android:gravity="end|center_vertical"
+                        android:hint="성함"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp"
+                        tools:text="홍길동" />
+
+                    <EditText
+                        android:id="@+id/number3EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:nextFocusDown="@id/name4EditText"
+                        android:gravity="center"
+                        android:hint="전화번호"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp"
+                        tools:text="010 1234 1234" />
+
+                    <CheckBox
+                        android:id="@+id/tip3Checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:button="@drawable/checkbox_greeny"
+                        android:fontFamily="@font/ns_acr"
+                        android:paddingStart="7.4dp"
+                        android:text="팁포함"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="13dp" />
+                </LinearLayout>
+                <!--전화번호4-->
+                <LinearLayout
+                    android:id="@+id/number4Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="5.5dp"
+                    android:paddingEnd="19.5dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/name4EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="17dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="end|center_vertical"
+                        android:hint="성함"
+                        android:nextFocusDown="@id/number4EditText"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp"
+                        tools:text="홍길동" />
+
+                    <EditText
+                        android:id="@+id/number4EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:hint="전화번호"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp"
+                        tools:text="010 1234 1234" />
+
+                    <CheckBox
+                        android:id="@+id/tip4Checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:button="@drawable/checkbox_greeny"
+                        android:fontFamily="@font/ns_acr"
+                        android:paddingStart="7.4dp"
+                        android:text="팁포함"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/plusImageView"-->
+                <!--                        android:layout_marginTop="7dp"-->
+                <!--                        android:layout_gravity="end"-->
+                <!--                        android:layout_width="20.8dp"-->
+                <!--                        android:layout_height="20.8dp"-->
+                <!--                        android:src="@drawable/ic_plus_circle_grey"/>-->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_shape"
+            android:fontFamily="@font/ns_acr"
+            android:text="취소"
+            android:textColor="@color/greyish_brown_two"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_coral_shape_radius_7"
+            android:fontFamily="@font/ns_acr"
+            android:text="결제요청"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</RelativeLayout>

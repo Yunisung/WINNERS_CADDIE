@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".OrderPaymentCompleteActivity">
+
+    <include layout="@layout/header_layout"
+        android:visibility="gone"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="55dp"
+                android:src="@drawable/ic_icon_check" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="19.5dp"
+                android:fontFamily="@font/ns_aceb"
+                android:text="결제가 완료 되었습니다."
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/amountInfoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10.5dp"
+                android:fontFamily="@font/ns_acr"
+                android:gravity="center_horizontal"
+                android:text="결제가 완료 되었습니다.\n(1/4)"
+                android:textColor="@color/coral"
+                android:textSize="14dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="42.5dp"
+                android:background="@color/pinkish_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="결제금액"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/amountTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_aceb"
+                    android:gravity="end"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="21dp"
+                    tools:text="1,806,004원" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/pinkish_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="상품명"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/placeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:gravity="end"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp"
+                    tools:text="TX200316016511" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="구매자"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:gravity="end"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp"
+                    tools:text="TX200316016511" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="휴대전화번호"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/phoneNumberTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:gravity="end"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp"
+                    tools:text="5409-26**-****-****" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="승인일자"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/approvalDayTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:gravity="end"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp"
+                    tools:text="2020-03-16 14:02:02" />
+
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/pinkish_grey" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelButtn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/tomato"
+            android:fontFamily="@font/ns_acb"
+            android:text="취소"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/receiptButtn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_grey_line_shape"
+            android:fontFamily="@font/ns_acb"
+            android:text="영수증보기"
+            android:textColor="@color/greyish_brown_two"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/nextPayButtn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_coral_shape_radius_7"
+            android:fontFamily="@font/ns_acb"
+            android:text="결제계속하기"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/exitButtn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_green_shape_radius_7"
+            android:fontFamily="@font/ns_acb"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/printButtn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@color/dark_sky_blue"
+            android:fontFamily="@font/ns_acb"
+            android:text="PRINT"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:visibility="gone" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/smsButtn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@color/greyish_brown"
+            android:fontFamily="@font/ns_acb"
+            android:text="SMS"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

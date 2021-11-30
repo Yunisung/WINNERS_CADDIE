@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_layout" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/ns_acb"
+                android:text="APP정보"
+                android:textColor="@color/black_two"
+                android:textSize="17dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="Version"
+                    android:textColor="@color/black_two"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/versionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acb"
+                    android:gravity="end"
+                    android:textColor="@color/black_two"
+                    android:textSize="15dp"
+                    tools:text="1.00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="터미널 ID"
+                    android:textColor="@color/black_two"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/terminalIdTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acb"
+                    android:gravity="end"
+                    android:textColor="@color/black_two"
+                    android:textSize="15dp"
+                    tools:text="1.00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="사업자 상호"
+                    android:textColor="@color/black_two"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/mchtNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acb"
+                    android:gravity="end"
+                    android:textColor="@color/black_two"
+                    android:textSize="15dp"
+                    tools:text="1.00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="사업자 번호"
+                    android:textColor="@color/black_two"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/bizNumberTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acb"
+                    android:gravity="end"
+                    android:textColor="@color/black_two"
+                    android:textSize="15dp"
+                    tools:text="1.00" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="17dp"
+                android:background="@color/white_four" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/ns_acb"
+                android:text="프린터 찾기"
+                android:textColor="@color/black_two"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/ns_acr"
+                android:text="블루투스 프린트 장비를 다시 검색합니다"
+                android:textColor="@color/black_two"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/printerSearchButton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="23dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/ns_aceb"
+                android:background="@drawable/round_rect_denim_shape_radius_7"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="18dp"
+                android:text="검색" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginBottom="17dp"
+                android:background="@color/white_four" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/ns_acb"
+                android:text="카드리더기 등록(재등록)"
+                android:textColor="@color/black_two"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/ns_acr"
+                android:text="블루투스 카드리더기를 다시 검색하여 등록합니다."
+                android:textColor="@color/black_two"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/readerSearchButton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="23dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/ns_aceb"
+                android:background="@drawable/round_rect_green_shape_radius_4"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="18dp"
+                android:text="등록/재등록" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginBottom="17dp"
+                android:background="@color/white_four" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/ns_acb"
+                android:visibility="gone"
+                android:text="블루투스 연결유지 설정."
+                android:textColor="@color/black_two"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                android:fontFamily="@font/ns_acr"
+                android:lineSpacingMultiplier="1.3"
+                android:text="블루투스 연결유지 설정서비스를 제공합니다."
+                android:textColor="@color/black_two"
+                android:textSize="15dp" />
+
+            <FrameLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="17dp"
+                android:layout_marginTop="17dp"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:background="@color/orange_pink">
+
+                <Button
+                    android:id="@+id/btConnectSettingButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_pressed_selector"
+                    android:text="블루투스 연결유지 설정"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/ns_aceb" />
+
+                <View
+                    android:id="@+id/connectSettingView"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle_view_selector"/>
+
+            </FrameLayout>
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginBottom="17dp"
+                android:background="@color/white_four" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/ns_acb"
+                android:text="단말기 초기화"
+                android:textColor="@color/black_two"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/ns_acr"
+                android:lineSpacingMultiplier="1.3"
+                android:text="단말기 설정을 초기화합니다.\n앱을 다시 시작해야 합니다."
+                android:textColor="@color/black_two"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="23dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/ns_aceb"
+                android:background="@drawable/round_rect_coral_shape_radius_7"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="18dp"
+                android:text="초기화" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

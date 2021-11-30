@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:minWidth="300dp"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    tools:paddingHorizontal="40dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:minWidth="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/round_rect_white_top_radius_12_shape"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22.4dp"
+            android:fontFamily="@font/ns_aceb"
+            android:gravity="center"
+            android:text="알림"
+            android:textColor="@color/black"
+            android:textSize="22.5dp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="12"
+            tools:listitem="@layout/item_installment_layout" />
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/round_rect_green_bottom_radius_12_shape"
+            android:fontFamily="@font/ns_aceb"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="21dp" />
+
+    </LinearLayout>
+</FrameLayout>

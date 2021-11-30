@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/greeny_blue</item>
+        <item name="colorPrimaryDark">@color/greeny_blue</item>
+        <item name="colorAccent">@color/greeny_blue</item>
+
+        <item name="android:windowBackground">@drawable/intro_background_shape</item>
+    </style>
+
+    <color name="whitegrey">#FFF2F2F2</color>
+    <!-- AlertDialog text color fix thanks to Shawn Castrianni, see: http://groups.google.com/group/android-developers/browse_thread/thread/f0b34621d3a70c4b -->
+    <style name="DialogLight" parent="@android:style/Theme.Dialog">
+
+        <item name="android:windowBackground">@color/whitegrey</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Custom Dialog Theme for Remove Default Dialog Margins -->
+    <style name="DialogTheme" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+
+    <style name="sms_dialog_edittext">
+        <item name="colorControlNormal">@color/greeny_blue</item>
+    </style>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".HistoryDetailActivity">
+
+    <include layout="@layout/header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67.5dp"
+        android:background="@color/pale_grey"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="11.5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:fontFamily="@font/ns_aceb"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="22.5sp"
+            android:text="분할 결제 내역"
+            android:textColor="@color/black"
+            android:textSize="17.5dp" />
+
+        <TextView
+            android:id="@+id/cancelCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/ns_acr"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="29sp"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            tools:text="취소 (1건)" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="13dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/greyish" />
+
+        <TextView
+            android:id="@+id/readyCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/ns_acr"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="29sp"
+            android:textColor="@color/coral"
+            android:textSize="11dp"
+            tools:text=" (1건)" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="13dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/greyish" />
+
+        <TextView
+            android:id="@+id/completeCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/ns_acr"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="29sp"
+            android:textColor="@color/greeny_blue"
+            android:textSize="11dp"
+            tools:text=" (1건)" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/detailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

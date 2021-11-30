@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="300dp"
+    android:background="#00000000"
+    tools:paddingHorizontal="40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="300dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/round_rect_white_top_radius_12_shape"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_icon_cancel"
+            android:fontFamily="@font/ns_aceb"
+            android:padding="20dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_envelope" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22.4dp"
+            android:fontFamily="@font/ns_aceb"
+            android:gravity="center"
+            android:text="SMS 전송"
+            android:textColor="@color/black"
+            android:textSize="22.5dp" />
+
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:fontFamily="@font/ns_acb"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/greyish_brown_two"
+            tools:text="광원_테스트_본사용\n가맹점 정보를 입력해주세요." />
+
+        <EditText
+            android:id="@+id/smsEditText"
+            android:layout_marginStart="21.8dp"
+            android:layout_marginEnd="21.8dp"
+            android:layout_marginTop="20dp"
+            android:imeOptions="actionDone"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColorHint="@color/pinkish_grey"
+            android:textSize="12dp"
+            style="@style/sms_dialog_edittext"
+            android:hint="받는 분 전화번호"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/round_rect_green_bottom_radius_12_shape"
+            android:fontFamily="@font/ns_aceb"
+            android:text="SMS 전송"
+            android:textColor="@color/white"
+            android:textSize="21dp" />
+
+
+    </LinearLayout>
+</FrameLayout>

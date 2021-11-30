@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+                <shape
+                    android:padding="10dp"
+                    android:shape="rectangle">
+                    <solid android:color="#FFFFFF" />
+                    <corners
+                        android:bottomLeftRadius="7dp"
+                        android:bottomRightRadius="7dp"
+                        android:topLeftRadius="7dp"
+                        android:topRightRadius="7dp" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="#D8D8D8" />
+
+
+                </shape>
+
+<!--        <shape>-->
+<!--            <gradient-->
+<!--                android:angle="90"-->
+<!--                android:endColor="#ffffff"-->
+<!--                android:startColor="#ffffff"-->
+<!--                android:type="linear" />-->
+<!--            <stroke-->
+<!--                android:width="0.33dp"-->
+<!--                android:color="#0fb1fa" />-->
+<!--            <corners android:radius="0dp" />-->
+<!--            <padding-->
+<!--                android:bottom="3dp"-->
+<!--                android:left="3dp"-->
+<!--                android:right="3dp"-->
+<!--                android:top="3dp" />-->
+<!--        </shape>-->
+    </item>
+    <item android:right="5dp"
+        android:width="30dp"
+        android:height="30dp"
+        android:gravity="center_vertical|right"
+        android:drawable="@drawable/down">
+<!--        <bitmap-->
+<!--            android:gravity="center_vertical|right"-->
+<!--            android:src="@drawable/down" />-->
+    </item>
+</layer-list>

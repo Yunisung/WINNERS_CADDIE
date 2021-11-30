@@ -1,0 +1,159 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.google.gms.google-services'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.mtouch.caddie"
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1"
+        multiDexEnabled true
+        
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    signingConfigs {
+        releaseWithSignedKey {
+            storeFile file(SIGNED_STORE_FILE)
+            storePassword SIGNED_STORE_PASSWORD
+            keyAlias SIGNED_KEY_ALIAS
+            keyPassword SIGNED_KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+
+
+    productFlavors {
+        local {
+            applicationIdSuffix ".local"
+            versionCode 100
+            versionName "1.0.0"
+            buildConfigField 'boolean', 'IS_DEVEL', "true"
+            buildConfigField 'String', 'BASE_URL', '\"http://192.168.0.53:10035\"'
+            buildConfigField 'String', 'BASE_TMS_URL', '\"https://svctmsdev.mtouch.com\"'
+            buildConfigField 'String', 'BASE_API_URL', '\"https://svcapidev.mtouch.com\"'
+            flavorDimensions "default"
+        }
+
+        devel {
+            applicationIdSuffix ".devel"
+            versionCode 103
+            versionName "1.0.3"
+            buildConfigField 'boolean', 'IS_DEVEL', "true"
+            buildConfigField 'String', 'BASE_URL', '\"https://devgcd.bkwinners.kr\"'
+            buildConfigField 'String', 'BASE_TMS_URL', '\"https://devgcd.bkwinners.kr\"'
+            buildConfigField 'String', 'BASE_API_URL', '\"https://devapi.bkwinners.kr\"'
+            flavorDimensions "default"
+        }
+
+        tReal {
+            applicationIdSuffix ".treal"
+            versionCode 100
+            versionName "1.0.0"
+            buildConfigField 'boolean', 'IS_DEVEL', "true"
+            buildConfigField 'String', 'BASE_URL', '\"https://gcd.mtouch.com\"'
+            buildConfigField 'String', 'BASE_TMS_URL', '\"https://svctms.mtouch.com\"'
+            buildConfigField 'String', 'BASE_API_URL', '\"https://svcapi.mtouch.com\"'
+            flavorDimensions "default"
+        }
+
+        ttReal {
+            applicationIdSuffix ".ttreal"
+            versionCode 100
+            versionName "1.0.0"
+            buildConfigField 'boolean', 'IS_DEVEL', "true"
+            buildConfigField 'String', 'BASE_URL', '\"https://gcd.mtouch.com\"'
+            buildConfigField 'String', 'BASE_TMS_URL', '\"https://svctms.mtouch.com\"'
+            buildConfigField 'String', 'BASE_API_URL', '\"https://svcapi.mtouch.com\"'
+            flavorDimensions "default"
+        }
+
+        real {
+            versionCode 103
+            versionName "1.0.3"
+            buildConfigField 'boolean', 'IS_DEVEL', "false"
+            buildConfigField 'String', 'BASE_URL', '\"https://gcd.bkwinners.kr\"'
+            buildConfigField 'String', 'BASE_TMS_URL', '\"https://gcd.bkwinners.kr\"'
+            buildConfigField 'String', 'BASE_API_URL', '\"https://api.bkwinners.kr\"'
+            flavorDimensions "default"
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "winners_caddie_${variant.flavorName}_${variant.versionName}.apk"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation 'gun0912.ted:tedpermission:2.2.3'
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+    implementation 'com.github.applikeysolutions:cosmocalendar:1.0.4'
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
+
+
+//
+// Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+
+    // add library recept
+//    implementation 'com.github.danielfelgar:draw-receipt:0.1.3'
+
+    configurations {
+        all*.exclude group: 'com.google.code.gson'
+    }
+
+    implementation 'com.github.pengrad:java-telegram-bot-api:4.8.0'
+
+    implementation platform('com.google.firebase:firebase-bom:26.0.0')
+//    implementation 'com.google.firebase:firebase-core:17.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.3.0'
+
+//    implementation ('com.google.firebase:firebase-analytics')
+//    implementation ('com.google.firebase:firebase-analytics'){
+//        exclude group: 'com.google.android.gms', module: 'play-services-ads-identifier'
+//    }
+
+    implementation ('com.google.firebase:firebase-analytics') {
+        exclude module: "play-services-ads-identifier"
+    }
+    //app gradle
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+
+    //calender
+    implementation 'com.github.sundeepk:compact-calendar-view:3.0.0'
+
+}
+
+realm {
+    syncEnabled = true
+}
+apply plugin: 'com.google.gms.google-services'

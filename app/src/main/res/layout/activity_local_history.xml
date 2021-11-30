@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:background="@color/white"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:src="@drawable/back"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/headerTitleTextView"
+            android:text="앱호출 결제내역"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ns_aceb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/todayButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:paddingTop="30dp"
+                android:text="당일"
+                android:textSize="15dp"
+                android:textColor="@color/black_two"
+                android:fontFamily="@font/ns_acb"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:id="@+id/todayLineView"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:background="@color/watermelon"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/yesterdayButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:paddingTop="30dp"
+                android:text="전일"
+                android:textSize="15dp"
+                android:textColor="@color/black_two"
+                android:fontFamily="@font/ns_acb"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:id="@+id/yesterdayLineView"
+                android:visibility="gone"
+                android:background="@color/watermelon"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/weekButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:paddingTop="30dp"
+                android:text="7일"
+                android:textSize="15dp"
+                android:textColor="@color/black_two"
+                android:fontFamily="@font/ns_acb"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:id="@+id/weekLineView"
+                android:visibility="gone"
+                android:background="@color/watermelon"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/customButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:paddingTop="30dp"
+                android:text="직접설정"
+                android:textSize="15dp"
+                android:textColor="@color/black_two"
+                android:fontFamily="@font/ns_acb"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:id="@+id/customLineView"
+                android:visibility="gone"
+                android:background="@color/watermelon"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:background="@color/watermelon"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <LinearLayout
+        android:id="@+id/customSearchLayout"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/startLayout"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_watermelon_0_5dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/startDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/ns_acr"
+                android:gravity="center"
+                android:textColor="@color/warm_grey"
+                android:textSize="15dp"
+                tools:text="2020-03-16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/ns_acr"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/warm_grey"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="4.8dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/watermelon" />
+
+        <LinearLayout
+            android:id="@+id/endLayout"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_watermelon_0_5dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/endDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:fontFamily="@font/ns_acr"
+                android:gravity="center"
+                android:textColor="@color/warm_grey"
+                android:textSize="15dp"
+                tools:text="2020-03-16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/ns_acr"
+                android:gravity="center"
+                android:text="23:59"
+                android:textColor="@color/warm_grey"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/searchHistoryButton"
+            android:background="@color/watermelon"
+            android:src="@drawable/search_icon"
+            android:layout_width="44.5dp"
+            android:layout_height="37dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/white_three"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRecyclerview"
+        tools:listitem="@layout/item_history_layout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

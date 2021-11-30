@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".OrderActivity">
+
+    <include layout="@layout/header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+
+            <!--            정보레이아웃-->
+            <LinearLayout
+                android:id="@+id/number1Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="전화번호1"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/number1TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="팁 금액"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tip1TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="결제금액"
+                        android:textColor="@color/coral"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/amount1TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_aceb"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/coral"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--            정보레이아웃-->
+            <LinearLayout
+                android:id="@+id/number2Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="전화번호2"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/number2TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="팁 금액"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tip2TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="결제금액"
+                        android:textColor="@color/coral"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/amount2TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_aceb"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/coral"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--            정보레이아웃-->
+            <LinearLayout
+                android:id="@+id/number3Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="전화번호3"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/number3TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="팁 금액"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tip3TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="결제금액"
+                        android:textColor="@color/coral"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/amount3TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_aceb"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/coral"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--            정보레이아웃-->
+            <LinearLayout
+                android:id="@+id/number4Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="전화번호1"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/number4TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="팁 금액"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tip4TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="start"
+                        android:text="결제금액"
+                        android:textColor="@color/coral"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/amount4TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ns_aceb"
+                        android:gravity="end"
+                        android:text="휘슬링팍CC"
+                        android:textColor="@color/coral"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/pinkish_grey" />
+
+            <Button
+                android:id="@+id/modifyButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="start|bottom"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_rect_grey_line_shape"
+                android:fontFamily="@font/ns_acb"
+                android:text="결제정보 수정"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="17.5dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/smsButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|bottom"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_grey_shape_radius_7"
+            android:fontFamily="@font/ns_acb"
+            android:text="SMS"
+            android:textColor="@color/greyish_brown_two"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/directButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|bottom"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_coral_shape_radius_7"
+            android:fontFamily="@font/ns_acb"
+            android:text="수기결제"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/readerPayButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="6dp"
+            android:layout_gravity="start|bottom"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_green_shape_radius_7"
+            android:fontFamily="@font/ns_acb"
+            android:text="단말기결제"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/cashButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="6dp"
+            android:layout_gravity="start|bottom"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_green_shape_radius_7"
+            android:fontFamily="@font/ns_acb"
+            android:text="현금결제"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</LinearLayout>

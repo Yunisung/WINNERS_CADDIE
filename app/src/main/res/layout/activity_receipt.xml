@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.mtouch.ksnet.dpt.ReceiptActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/headerTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/ns_aceb"
+            android:text="영수증 조회"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/receiptLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/payment_box"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="40dp">
+
+                <TextView
+                    android:id="@+id/smsTitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/ns_aceb"
+                    android:text="매출 전표"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="20dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/watermelon" />
+
+                <LinearLayout
+                    android:id="@+id/mchtNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mchtNameTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="가맹점명"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/mchtNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="(주)넥스트페이먼츠_커피에반하다한대앞역점_KSNET오프	" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/mchtAddrLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mchtAddrTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="주소"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/mchtAddrTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="서울특별시 강남구 삼성로81길 22, 4층 한정빌딩 mtouch" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/mchtBizNumLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mchtBizNumTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="사업자번호"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/mchtBizNumTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="4198800046" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="승인결과"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/trxResultTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="승인" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="카드명"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/cardNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="국민마스타카드" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="카드번호"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/cardNumberTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="5409-26**-****-****" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="금액"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/amountTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="1,806,004원" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="할부"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/installmentTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="일시불" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="승인일자"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/approvalDayTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="2020-03-16 14:02:02" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="승인번호"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/approvalNumberTwoTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="30034798" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="매입사"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/purchaseNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="18dp"
+                        tools:text="국민" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/watermelon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="핸드폰번호"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/phoneNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="핸드폰번호"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/warm_grey"
+            android:textSize="20dp"
+            tools:text="01012341234" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/smsButtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/greyish_brown"
+            android:fontFamily="@font/ns_acb"
+            android:text="SMS전송"
+            android:textColor="@color/white"
+            android:textSize="21dp" />
+
+        <Button
+            android:id="@+id/imageSmsButtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@color/greyish_brown"
+            android:fontFamily="@font/ns_acb"
+            android:text="이미지전송"
+            android:textColor="@color/white"
+            android:textSize="21dp" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@color/dark_sky_blue"
+            android:fontFamily="@font/ns_acb"
+            android:text="닫기"
+            android:textColor="@color/white"
+            android:textSize="21dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

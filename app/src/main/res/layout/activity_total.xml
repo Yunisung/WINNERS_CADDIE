@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".TotalActivity">
+
+    <include layout="@layout/header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/todayButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/todayTextView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/ns_acb"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="13dp"
+                android:textColor="@color/greeny_blue"
+                android:textSize="17.5dp"
+                android:text="당일" />
+
+            <View
+                android:id="@+id/todayLineView"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/greeny_blue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yesterdayButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/yesterdayTextView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="전일"
+                android:fontFamily="@font/ns_acb"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="13dp"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="17.5dp" />
+
+            <View
+                android:id="@+id/yesterdayLineView"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/white_5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weekButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/weekTextView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="7일"
+                android:fontFamily="@font/ns_acb"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="13dp"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="17.5dp" />
+
+            <View
+                android:id="@+id/weekLineView"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/white_5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/customButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/customTextView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="직접설정"
+                android:fontFamily="@font/ns_acb"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="13dp"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="17.5dp" />
+
+            <View
+                android:id="@+id/customLineView"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/white_5" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/customSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#f6f6f6"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/startLayout"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_green_line_1dp_shape"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/startDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/ns_acr"
+                android:gravity="center"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="16dp"
+                tools:text="2020-03-16" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="4.8dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/greeny_blue" />
+
+        <LinearLayout
+            android:id="@+id/endLayout"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_rect_green_left_line_1dp_shape"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/endDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:fontFamily="@font/ns_acr"
+                android:gravity="center"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="15dp"
+                tools:text="2020-03-16" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/searchHistoryButton"
+            android:layout_width="32.5dp"
+            android:layout_height="32dp"
+            android:background="@drawable/round_rect_green_right_shape_radius_7"
+            android:scaleType="centerInside"
+            android:src="@drawable/search_icon" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="29dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="집계기간"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="17.5dp" />
+
+                <TextView
+                    android:id="@+id/totalTermTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_aceb"
+                    android:gravity="end"
+                    android:textColor="@color/black_two"
+                    android:textSize="16dp"
+                    tools:text="TX200316016511" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="11dp"
+                android:background="@color/pinkish_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="승인건수"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="17.5dp" />
+
+                <TextView
+                    android:id="@+id/paymentCountTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acb"
+                    android:gravity="end"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp"
+                    tools:text="1건" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="승인금액"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="17.5dp" />
+
+                <TextView
+                    android:id="@+id/paymentAmountTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_aceb"
+                    android:gravity="end"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="16dp"
+                    tools:text="1,806,004 원" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/pinkish_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="취소건수"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="17.5dp" />
+
+                <TextView
+                    android:id="@+id/paymentCancelCountTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acb"
+                    android:gravity="end"
+                    android:textColor="@color/coral"
+                    android:textSize="16dp"
+                    tools:text="1건" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_acr"
+                    android:text="취소금액"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="17.5dp" />
+
+                <TextView
+                    android:id="@+id/paymentCancelAmountTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ns_aceb"
+                    android:gravity="end"
+                    android:textColor="@color/coral"
+                    android:textSize="16dp"
+                    tools:text="1,806,004 원" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/round_rect_pale_grey_shape_radius_7"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acb"
+                        android:text="합계건수"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textSize="17.5dp" />
+
+                    <TextView
+                        android:id="@+id/paymentTotalCountTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="15dp"
+                        tools:text="1건" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/pinkish_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acb"
+                        android:text="합계금액"
+                        android:textColor="@color/greeny_blue"
+                        android:textSize="17.5dp" />
+
+                    <TextView
+                        android:id="@+id/paymentTotalAmountTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ns_acb"
+                        android:gravity="end"
+                        android:textColor="@color/black_two"
+                        android:textSize="15dp"
+                        tools:text="1,806,004 원" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal"
+                android:paddingBottom="37.5dp">
+
+                <Button
+                    android:id="@+id/smsButtn"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_rect_grey_shape_radius_7"
+                    android:fontFamily="@font/ns_aceb"
+                    android:text="SMS"
+                    android:textColor="@color/greyish_brown_two"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/finishButtn"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_rect_green_shape_radius_7"
+                    android:fontFamily="@font/ns_aceb"
+                    android:text="확인"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

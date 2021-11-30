@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".auth.MchtApplyInfo2Activity">
+
+    <include layout="@layout/header_layout" />
+
+    <!--            상단 인디케이터-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.3dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="19.5dp"
+                android:layout_height="19.5dp"
+                android:src="@drawable/ic_icon_check_box_false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.8dp"
+                android:text="STEP1."
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="회원가입"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="57.5dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:background="@color/pinkish_grey" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="19.5dp"
+                android:layout_height="19.5dp"
+                android:src="@drawable/ic_icon_check_box_false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.8dp"
+                android:text="STEP2."
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="사업자 정보설정"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="9dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="57.5dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:background="@color/pinkish_grey" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="19.5dp"
+                android:layout_height="19.5dp"
+                android:src="@drawable/ic_icon_check_box_true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.8dp"
+                android:text="STEP3."
+                android:textColor="@color/greeny_blue"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="결제서비스 신청"
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="9dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!--            안내-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/ns_acb"
+            android:text="결제서비스 (PG) 신청"
+            android:textColor="@color/greyish_brown_two"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@color/greeny_blue" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="11dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ns_acr"
+                android:letterSpacing="-0.05"
+                android:lineSpacingExtra="5dp"
+                android:text="결제서비스(PG)를 신청해주세요.
+\n아래 원하시는 버튼 클릭 시, 전자계약서가 발송됩니다.
+\n받으신 알림톡 또는 E-mil 을 확인 후, 전자계약서를 작성해주세요.   "
+                android:textColor="@color/greyish_brown_two"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="17dp"
+            android:background="@color/pinkish_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_marginHorizontal="41dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="@drawable/round_rect_green_shape_radius_4"
+                android:fontFamily="@font/ns_acr"
+                android:text="알림톡"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/sendEmailButton"
+                android:layout_marginStart="6dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="@drawable/round_rect_green_shape_radius_4"
+                android:fontFamily="@font/ns_acr"
+                android:text="E - mail"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

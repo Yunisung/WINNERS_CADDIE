@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroActivity"
+    android:background="@drawable/intro_background_shape">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:src="@drawable/ic_emblem"
+            android:layout_width="75.9dp"
+            android:layout_height="80.1dp"/>
+        <ImageView
+            android:layout_marginTop="10.4dp"
+            android:src="@drawable/ic_logo"
+            android:layout_width="212.5dp"
+            android:layout_height="31dp"/>
+
+        <ImageView
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:layout_marginTop="30dp"
+            android:id="@+id/loading_imageview"
+            android:layout_width="36.5dp"
+            android:layout_height="39.5dp"
+            android:src="@drawable/ic_loading"/>
+
+        <TextView
+            tools:visibility="gone"
+            android:id="@+id/contentTextView1"
+            android:layout_marginTop="47dp"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/ns_acb"
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/intro_text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            tools:visibility="gone"
+            android:id="@+id/contentTextView2"
+            android:layout_marginTop="18.5dp"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ns_acr"
+            android:gravity="center_horizontal"
+            android:lineHeight="27.5dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/intro_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+    
+    <Button
+        tools:visibility="gone"
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/round_rect_white_shape_radius_5"
+        android:text="시작하기"
+        android:textColor="@color/denim_blue"
+        android:textSize="24dp"
+        android:fontFamily="@font/ns_fonts"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="63dp"
+        app:layout_constraintBottom_toBottomOf="@id/signupButton"/>
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:text="회원가입"
+        android:textColor="@color/greeny_blue"
+        android:textSize="25dp"
+        android:fontFamily="@font/ns_fonts"
+        android:layout_marginStart="20dp"
+        android:visibility="gone"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="1.20"
+        android:layout_margin="3dp"
+        android:textColor="@color/white"
+        android:id="@+id/versionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".CashPaymentActivity">
+
+    <include layout="@layout/header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <RadioGroup
+                android:layout_marginTop="13dp"
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/approvalRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="승인시 체크" />
+
+                <RadioButton
+                    android:id="@+id/approvalCancelRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="취소시 체크" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사업자번호"
+                android:textColor="@color/black_two"
+                android:textSize="18dp" />
+            <EditText
+                android:id="@+id/bizIdEditText"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="" />
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KSNet 단말기 번호"
+                android:textColor="@color/black_two"
+                android:textSize="18dp" />
+            <EditText
+                android:id="@+id/dptIdEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="ex)DPT.." />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/cancelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="승인번호"
+                    android:textColor="@color/black_two"
+                    android:textSize="18dp" />
+                <EditText
+                    android:id="@+id/cancelAuthNumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/serialNumberEditText"
+                    android:singleLine="true"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="승인일자 예)20년4월14일 => 200414"
+                    android:textColor="@color/black_two"
+                    android:textSize="18dp" />
+                <EditText
+                    android:id="@+id/cancelAuthDateEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/serialNumberEditText"
+                    android:singleLine="true"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+
+
+
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이용 방법"
+                android:textColor="@color/black_two"
+                android:textSize="18dp" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/bizReceiptRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사업자 지출증빙" />
+
+                <RadioButton
+                    android:id="@+id/personalReceiptRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="개인 소득공제" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="입력 방법"
+                android:textColor="@color/black_two"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cardRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="카드이용"/>
+                <RadioButton
+                    android:id="@+id/numberRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="번호입력"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="번호 입력"
+                android:textColor="@color/black_two"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/cashNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/serialNumberEditText"
+                android:singleLine="true"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결제금액"
+                android:textColor="@color/black_two"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/amountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableEnd="@drawable/won"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/serialNumberEditText"
+                android:singleLine="true"
+                android:textSize="15dp" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/payButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="37.5dp"
+                    android:background="@drawable/line_shape"
+                    android:fontFamily="@font/ns_aceb"
+                    android:text="결제하기"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

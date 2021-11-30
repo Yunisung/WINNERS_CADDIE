@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".auth.SignUpActivity">
+
+        <include layout="@layout/header_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="29.8dp"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11.5dp"
+                        android:fontFamily="@font/ns_acb"
+                        android:text="사업자 정보 설정"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.5dp"
+                        android:fontFamily="@font/ns_acb"
+                        android:text="PG결제 신청 가이드"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.5dp"
+                        android:fontFamily="@font/ns_acr"
+                        android:text="아래 해당 영역을 클릭하면 처리할 수 있는 페이지로 이동합니다."
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ns_acb"
+                            android:text="사업자 정보가 없다면? click"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                        <Button
+                            android:id="@+id/bizInfoButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/line_shape"
+                            android:fontFamily="@font/ns_aceb"
+                            android:text="사업자 생성"
+                            android:textColor="@color/white"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/rect_line"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ns_acb"
+                            android:text="STEP1"
+                            android:textColor="@color/watermelon"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11.5dp"
+                            android:fontFamily="@font/ns_acb"
+                            android:text="사업자 정보 설정"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.5dp"
+                            android:fontFamily="@font/ns_acb"
+                            android:text="사업자 정보 설정을 입력하여 설정하세요"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#ededed" />
+
+                        <TextView
+                            android:id="@+id/applyButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/ns_acb"
+                            android:text="설정하기 >"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/popupLayout"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rect_line"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_line"
+            android:padding="5dp"
+            android:text="X"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="11.5dp"
+            android:fontFamily="@font/ns_acb"
+            android:text="사업자 생성 쉽게 생성하는 법"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10.5dp"
+            android:fontFamily="@font/ns_acb"
+            android:text="간단하게 사업자 정보를 쉽게 생성하세요."
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#ededed" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="●"
+                android:textColor="@color/watermelon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/ns_acb"
+                android:text="관할세무서 방문 신청"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/ns_acr"
+                android:text="오프라인 신청"
+                android:textColor="@color/warm_grey"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.5dp"
+            android:fontFamily="@font/ns_acr"
+            android:text="1. 사업자 등록 신청서를 국세청 사이트에서 프린트\n2. 작성 후 구비서류를 갖추어 관할 세무서로 찾아가 제출"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="●"
+                android:textColor="@color/watermelon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/ns_acb"
+                android:text="홈텍스 사이트 신청"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/ns_acr"
+                android:text="온라인 신청"
+                android:textColor="@color/warm_grey"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.5dp"
+            android:fontFamily="@font/ns_acr"
+            android:text="1. 홈텍스 사이트 접속\n2. 회원가입 및 신청/제출"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="●"
+                android:textColor="@color/watermelon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/ns_acb"
+                android:text="사업자 통장 신청"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/ns_acr"
+                android:text="오프라인 신청"
+                android:textColor="@color/warm_grey"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.5dp"
+            android:fontFamily="@font/ns_acr"
+            android:text="1. 대표자 신분증, 사업자 등록증, 증빙서류 갖추어 은행 방문\n2. 사업자 통장 신청/제출"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

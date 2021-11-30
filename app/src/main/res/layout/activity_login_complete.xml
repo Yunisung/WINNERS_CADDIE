@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".auth.SignUpCompleteActivity">
+
+    <include layout="@layout/header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="23.5dp"
+                android:layout_height="23.5dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/progess_1" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="9.5dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/check_icon" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="74.5dp"
+            android:layout_height="1.5dp"
+            android:background="@drawable/line_shape" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="23.5dp"
+                android:layout_height="23.5dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/progess_1" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="9.5dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/check_icon" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="74.5dp"
+            android:layout_height="1.5dp"
+            android:background="@drawable/line_shape" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="23.5dp"
+                android:layout_height="23.5dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/progess_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/ns_aceb"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/watermelon"
+                android:textSize="12dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ns_acb"
+            android:text="사업자"
+            android:textColor="@color/black_two"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/mchtNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/ns_acr"
+            android:textColor="@color/black_two"
+            android:textSize="15dp"
+            tools:text="주식회사 광원" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/mchtNameTextView"
+            android:layout_marginTop="10.8dp"
+            android:background="@color/watermelon" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ns_acb"
+            android:text="대표자"
+            android:textColor="@color/black_two"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/ceoNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/ns_acr"
+            android:textColor="@color/black_two"
+            android:textSize="15dp"
+            tools:text="주식회사 광원" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/ceoNameTextView"
+            android:layout_marginTop="10.8dp"
+            android:background="@color/watermelon" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ns_acb"
+            android:text="사업자 번호"
+            android:textColor="@color/black_two"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/businessNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/ns_acr"
+            android:textColor="@color/black_two"
+            android:textSize="15dp"
+            tools:text="주식회사 광원" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/businessNumberTextView"
+            android:layout_marginTop="10.8dp"
+            android:background="@color/watermelon" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ns_acb"
+            android:text="주소"
+            android:textColor="@color/black_two"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/ns_acr"
+            android:textColor="@color/black_two"
+            android:textSize="15dp"
+            tools:text="주식회사 광원" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/addressTextView"
+            android:layout_marginTop="10.8dp"
+            android:background="@color/watermelon" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ns_acb"
+            android:text="전화번호"
+            android:textColor="@color/black_two"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/telNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/ns_acr"
+            android:textColor="@color/black_two"
+            android:textSize="15dp"
+            tools:text="주식회사 광원" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/telNumberTextView"
+            android:layout_marginTop="10.8dp"
+            android:background="@color/watermelon" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="37.5dp"
+            android:background="@drawable/line_shape"
+            android:fontFamily="@font/ns_aceb"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".CreditPaymentActivity">
+
+    <include layout="@layout/header_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/ns_acb"
+        android:text="결제금액을 입력해주세요."
+        android:textColor="@color/black_two"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/amountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableEnd="@drawable/won"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:nextFocusDown="@+id/serialNumberEditText"
+        android:singleLine="true"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/ns_acb"
+        android:text="할부기간을 입력해주세요."
+        android:textColor="@color/black_two"
+        android:textSize="18dp" />
+
+    <RelativeLayout
+        android:id="@+id/installmentButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18.3dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/border_grey_1dp">
+
+        <TextView
+            android:id="@+id/installmentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/ns_acr"
+            android:gravity="center"
+            android:text="일시불"
+            android:textColor="@color/warm_grey"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/down_arrow" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/payButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="37.5dp"
+            android:background="@drawable/line_shape"
+            android:fontFamily="@font/ns_aceb"
+            android:text="결제하기"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </FrameLayout>
+
+</LinearLayout>
