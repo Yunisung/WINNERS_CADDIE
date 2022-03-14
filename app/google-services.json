@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:745659002261:android:7eae11c92e218d63261a9c",
         "android_client_info": {
-          "package_name": "com.mtouch.caddie"
+          "package_name": "com.bkwinners.caddie"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "745659002261-a2t0214mksp7k0d2hnv6m99gr0nrkpnr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mtouch.caddie",
+            "package_name": "com.bkwinners.caddie",
             "certificate_hash": "9457054364cde52a769197a38b032d73c562c226"
           }
         },
@@ -25,7 +25,7 @@
           "client_id": "745659002261-rv72pa0v1c1vtfarkcpjbmirh5avpigi.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mtouch.caddie",
+            "package_name": "com.bkwinners.caddie",
             "certificate_hash": "0c5760e1407b1b5d65fdad44769d69e4bb9a7671"
           }
         },
@@ -54,7 +54,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:745659002261:android:3ebfdf695950af68261a9c",
         "android_client_info": {
-          "package_name": "com.mtouch.caddie.devel"
+          "package_name": "com.bkwinners.caddie.devel"
         }
       },
       "oauth_client": [
@@ -62,7 +62,7 @@
           "client_id": "745659002261-13rtljjiqfndu2252c6iv907v3eu1lhl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mtouch.caddie.devel",
+            "package_name": "com.bkwinners.caddie.devel",
             "certificate_hash": "9457054364cde52a769197a38b032d73c562c226"
           }
         },
@@ -70,7 +70,7 @@
           "client_id": "745659002261-cra9gi3ufnt37l68faltevoo5v2s0uap.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mtouch.caddie.devel",
+            "package_name": "com.bkwinners.caddie.devel",
             "certificate_hash": "0c5760e1407b1b5d65fdad44769d69e4bb9a7671"
           }
         },
@@ -99,7 +99,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:745659002261:android:ee63a14b17f2371f261a9c",
         "android_client_info": {
-          "package_name": "com.mtouch.caddie.local"
+          "package_name": "com.bkwinners.caddie.local"
         }
       },
       "oauth_client": [
@@ -107,7 +107,7 @@
           "client_id": "745659002261-f1v2lg89tn7hbl9btqktummtjakah13i.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mtouch.caddie.local",
+            "package_name": "com.bkwinners.caddie.local",
             "certificate_hash": "9457054364cde52a769197a38b032d73c562c226"
           }
         },
@@ -115,7 +115,7 @@
           "client_id": "745659002261-um2gnr2saiv4lpf98gv9ejrutr24k80j.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mtouch.caddie.local",
+            "package_name": "com.bkwinners.caddie.local",
             "certificate_hash": "0c5760e1407b1b5d65fdad44769d69e4bb9a7671"
           }
         },
@@ -144,7 +144,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:745659002261:android:605be483a1f4ca1d261a9c",
         "android_client_info": {
-          "package_name": "com.mtouch.caddie.treal"
+          "package_name": "com.bkwinners.caddie.treal"
         }
       },
       "oauth_client": [
@@ -173,7 +173,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:745659002261:android:f9e43683c5e2299d261a9c",
         "android_client_info": {
-          "package_name": "com.mtouch.caddie.ttreal"
+          "package_name": "com.bkwinners.caddie.ttreal"
         }
       },
       "oauth_client": [

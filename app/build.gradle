@@ -6,11 +6,11 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "com.mtouch.caddie"
+        applicationId "com.bkwinners.caddie"
         minSdkVersion 22
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
-        versionName "1"
+        versionName "1.0.0"
         multiDexEnabled true
         
     }
@@ -83,11 +83,11 @@ android {
         }
 
         real {
-            versionCode 103
-            versionName "1.0.3"
+            versionCode 101
+            versionName "1.0.1"
             buildConfigField 'boolean', 'IS_DEVEL', "false"
             buildConfigField 'String', 'BASE_URL', '\"https://gcd.bkwinners.kr\"'
-            buildConfigField 'String', 'BASE_TMS_URL', '\"https://gcd.bkwinners.kr\"'
+            buildConfigField 'String', 'BASE_TMS_URL', '\"https://devtms.bkwinners.kr\"'
             buildConfigField 'String', 'BASE_API_URL', '\"https://api.bkwinners.kr\"'
             flavorDimensions "default"
         }

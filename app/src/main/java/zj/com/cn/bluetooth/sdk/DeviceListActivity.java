@@ -21,10 +21,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
-import com.mtouch.ksnet.dpt.ks03.pay.Constants;
+import com.bkwinners.ksnet.dpt.ks03.pay.Constants;
 
-import com.mtouch.caddie.BuildConfig;
-import com.mtouch.caddie.R;
+import com.bkwinners.caddie.BuildConfig;
+import com.bkwinners.caddie.R;
 
 
 /**

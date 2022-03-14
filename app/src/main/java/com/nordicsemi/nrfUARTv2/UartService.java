@@ -51,15 +51,15 @@ import android.widget.RemoteViews;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.mtouch.ksnet.dpt.MainApplication;
-import com.mtouch.ksnet.dpt.action.PayResultActivity;
-import com.mtouch.ksnet.dpt.action.process.util.LOG;
-import com.mtouch.ksnet.dpt.common.Utils;
-import com.mtouch.ksnet.dpt.design.appToApp.network.ApiUtils;
-import com.mtouch.ksnet.dpt.design.util.SharedPreferenceUtil;
-import com.mtouch.ksnet.dpt.ks03.pay.Constants;
-import com.mtouch.caddie.BuildConfig;
-import com.mtouch.caddie.R;
+import com.bkwinners.ksnet.dpt.MainApplication;
+import com.bkwinners.ksnet.dpt.action.PayResultActivity;
+import com.bkwinners.ksnet.dpt.action.process.util.LOG;
+import com.bkwinners.ksnet.dpt.common.Utils;
+import com.bkwinners.ksnet.dpt.design.appToApp.network.ApiUtils;
+import com.bkwinners.ksnet.dpt.design.util.SharedPreferenceUtil;
+import com.bkwinners.ksnet.dpt.ks03.pay.Constants;
+import com.bkwinners.caddie.BuildConfig;
+import com.bkwinners.caddie.R;
 
 import java.util.List;
 import java.util.UUID;

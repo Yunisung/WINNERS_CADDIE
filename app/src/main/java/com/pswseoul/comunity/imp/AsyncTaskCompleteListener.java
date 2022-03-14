@@ -3,8 +3,8 @@ package com.pswseoul.comunity.imp;
 import android.net.Uri;
 
 
-import com.mtouch.caddie.BuildConfig;
-import com.mtouch.caddie.R;
+import com.bkwinners.caddie.BuildConfig;
+import com.bkwinners.caddie.R;
 
 public  interface AsyncTaskCompleteListener{
 	String SCHEME = Uri.parse(BuildConfig.BASE_URL).getScheme();//"https";

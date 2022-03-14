@@ -11,10 +11,10 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import androidx.core.app.NotificationCompat;
 
-import com.mtouch.ksnet.dpt.ks03.pay.ksr03.MtouchPayKsnet;
+import com.bkwinners.ksnet.dpt.ks03.pay.ksr03.MtouchPayKsnet;
 
-import com.mtouch.caddie.BuildConfig;
-import com.mtouch.caddie.R;
+import com.bkwinners.caddie.BuildConfig;
+import com.bkwinners.caddie.R;
 //import com.google.firebase.messaging.RemoteMessage;
 //
 //public class MyFirebaseMessagingService extends com.google.firebase.messaging.FirebaseMessagingService {

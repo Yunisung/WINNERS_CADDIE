@@ -10,7 +10,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
-import com.mtouch.ksnet.dpt.ks03.pay.ksnet.KSNETStatus;
+import com.bkwinners.ksnet.dpt.ks03.pay.ksnet.KSNETStatus;
 import com.pswseoul.comunity.imp.AsyncTaskCompleteListener;
 
 import android.net.Uri;

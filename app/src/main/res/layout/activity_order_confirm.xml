@@ -464,11 +464,11 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_gravity="start|bottom"
+            android:layout_marginStart="6dp"
             android:layout_weight="1"
             android:background="@drawable/round_rect_coral_shape_radius_7"
             android:fontFamily="@font/ns_acb"
             android:text="수기결제"
-            android:layout_marginStart="6dp"
             android:textColor="@color/white"
             android:textSize="18dp" />
 
@@ -476,12 +476,12 @@
             android:id="@+id/readerPayButton"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginStart="6dp"
             android:layout_gravity="start|bottom"
+            android:layout_marginStart="6dp"
             android:layout_weight="1"
             android:background="@drawable/round_rect_green_shape_radius_7"
             android:fontFamily="@font/ns_acb"
-            android:text="단말기결제"
+            android:text="카드결제"
             android:textColor="@color/white"
             android:textSize="18dp" />
 

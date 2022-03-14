@@ -12,7 +12,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.mtouch.ksnet.dpt.ks03.pay.ksnet.KSNETStatus;
+import com.bkwinners.ksnet.dpt.ks03.pay.ksnet.KSNETStatus;
 import com.pswseoul.comunity.imp.AsyncTaskCompleteListener;
 
 public class HttpGetTask extends AsyncTask<String, Void, String>

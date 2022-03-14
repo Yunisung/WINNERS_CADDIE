@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mtouch.ksnet.dpt.design.HiddenOptionActivity"
+    tools:context="com.bkwinners.ksnet.dpt.design.HiddenOptionActivity"
     android:orientation="vertical"
     android:background="@drawable/intro_background_shape">
 

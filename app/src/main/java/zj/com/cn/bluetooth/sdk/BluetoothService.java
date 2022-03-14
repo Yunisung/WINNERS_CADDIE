@@ -16,8 +16,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import com.mtouch.ksnet.dpt.ks03.pay.Constants;
-import com.mtouch.ksnet.dpt.ks03.pay.ksr03.MtouchPayKsnet;
+import com.bkwinners.ksnet.dpt.ks03.pay.Constants;
+import com.bkwinners.ksnet.dpt.ks03.pay.ksr03.MtouchPayKsnet;
 
 
 /**

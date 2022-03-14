@@ -61,7 +61,7 @@
         android:background="#cccfd2"
         android:orientation="vertical">
 
-        <com.mtouch.ksnet.dpt.action.process.sign.SignView
+        <com.bkwinners.ksnet.dpt.action.process.sign.SignView
             android:id="@+id/signView"
             android:layout_width="match_parent"
             android:layout_height="300dp"

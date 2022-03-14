@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mtouch.ksnet.dpt.ks03.bluetooth.DeviceListActivity">
+    tools:context="com.bkwinners.ksnet.dpt.ks03.bluetooth.DeviceListActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

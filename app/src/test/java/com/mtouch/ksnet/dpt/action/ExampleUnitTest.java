@@ -1,4 +1,4 @@
-package com.mtouch.ksnet.dpt.action;
+package com.bkwinners.ksnet.dpt.action;
 
 import org.junit.Test;
 

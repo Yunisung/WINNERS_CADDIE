@@ -6,7 +6,7 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
-    tools:context="com.mtouch.ksnet.dpt.ReceiptActivity">
+    tools:context="com.bkwinners.ksnet.dpt.ReceiptActivity">
 
     <FrameLayout
         android:layout_width="match_parent"

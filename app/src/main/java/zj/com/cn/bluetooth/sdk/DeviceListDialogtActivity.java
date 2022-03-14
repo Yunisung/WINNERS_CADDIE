@@ -12,10 +12,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
 
-import com.mtouch.ksnet.dpt.ks03.pay.Constants;
+import com.bkwinners.ksnet.dpt.ks03.pay.Constants;
 
-import com.mtouch.caddie.BuildConfig;
-import com.mtouch.caddie.R;
+import com.bkwinners.caddie.BuildConfig;
+import com.bkwinners.caddie.R;
 
 import java.util.Set;
 

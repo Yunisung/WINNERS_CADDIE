@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mtouch.caddie">
+    package="com.bkwinners.caddie">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -21,7 +21,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:name="com.mtouch.ksnet.dpt.MainApplication"
+        android:name="com.bkwinners.ksnet.dpt.MainApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_app_icon"
         android:label="@string/app_name"
@@ -130,22 +130,22 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"
             android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.ReceiptPrintActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.LocalHistoryActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.HiddenOptionActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.ReceiptActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.TotalActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.InfomationActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.DirectPaymentActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.SettingActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.LoadingActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.PaymentCompleteActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.HistoryDetailActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.CashPaymentActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.HistoryActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.CreditPaymentActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.ReceiptPrintActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.LocalHistoryActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.HiddenOptionActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.ReceiptActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.TotalActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.InfomationActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.DirectPaymentActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.SettingActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.LoadingActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.PaymentCompleteActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.HistoryDetailActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.CashPaymentActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.HistoryActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.CreditPaymentActivity" android:exported="true"/>
         <activity
-            android:name="com.mtouch.ksnet.dpt.design.auth.AuthFirstActivity"
+            android:name="com.bkwinners.ksnet.dpt.design.auth.AuthFirstActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"
@@ -156,27 +156,27 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"
             android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.auth.LoginCompleteActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.auth.LoginCompleteActivity" android:exported="true"/>
         <activity
-            android:name="com.mtouch.ksnet.dpt.design.OldMainActivity"
+            android:name="com.bkwinners.ksnet.dpt.design.OldMainActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.design.IntroActivity" android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.ks03.PermissionActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.design.IntroActivity" android:exported="true"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.ks03.PermissionActivity" android:exported="true"/>
         <activity
-            android:name="com.mtouch.ksnet.dpt.ks03.bluetooth.DeviceListActivity"
+            android:name="com.bkwinners.ksnet.dpt.ks03.bluetooth.DeviceListActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Dialog"
             android:exported="true"/>
         <activity
-            android:name="com.mtouch.ksnet.dpt.ks03.bluetooth.DeviceRegistActivity"
+            android:name="com.bkwinners.ksnet.dpt.ks03.bluetooth.DeviceRegistActivity"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/Theme.AppCompat.Dialog"
             android:exported="true"/>
-        <activity android:name="com.mtouch.ksnet.dpt.ErrorActivity" android:exported="false"/>
+        <activity android:name="com.bkwinners.ksnet.dpt.ErrorActivity" android:exported="false"/>
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -184,17 +184,17 @@
             android:exported="true"/>
 
         <service
-            android:name="com.mtouch.ksnet.dpt.ks03.pay.CompleteCheckService"
+            android:name="com.bkwinners.ksnet.dpt.ks03.pay.CompleteCheckService"
             android:enabled="true"
             android:exported="true"
             android:foregroundServiceType="dataSync" />
 
         <receiver
-            android:name="com.mtouch.ksnet.dpt.ks03.pay.CompleteCheckReceiver"
+            android:name="com.bkwinners.ksnet.dpt.ks03.pay.CompleteCheckReceiver"
             android:enabled="true"
             android:exported="true" />
         <receiver
-            android:name="com.mtouch.ksnet.dpt.ks03.RestartReceiver"
+            android:name="com.bkwinners.ksnet.dpt.ks03.RestartReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -203,34 +203,34 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.mtouch.ksnet.dpt.ks03.pay.DirectPaymentActivity" android:exported="false"/> <!-- com.aynil.ksnet.dpt.sample.SampleMainActivity -->
+        <activity android:name="com.bkwinners.ksnet.dpt.ks03.pay.DirectPaymentActivity" android:exported="false"/> <!-- com.aynil.ksnet.dpt.sample.SampleMainActivity -->
         <!--
  com.aynil.parksuwon.myapplication03.pay.ksr03.MtouchPayKsnet
                 android:launchMode="singleTask"
                 android:alwaysRetainTaskState="true"
         -->
         <activity
-            android:name="com.mtouch.ksnet.dpt.ks03.pay.ksr03.MtouchPayKsnet"
+            android:name="com.bkwinners.ksnet.dpt.ks03.pay.ksr03.MtouchPayKsnet"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
             android:exported="true"/>
         <activity
-            android:name="com.mtouch.ksnet.dpt.action.process.view.PayCreditSign"
+            android:name="com.bkwinners.ksnet.dpt.action.process.view.PayCreditSign"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent"
             android:exported="true"/>
         <activity
-            android:name="com.mtouch.ksnet.dpt.sample.DeviceListActivity"
+            android:name="com.bkwinners.ksnet.dpt.sample.DeviceListActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Dialog"
             android:exported="true"/>
         <activity
-            android:name="com.mtouch.ksnet.dpt.ks03.pay.httpcomunity.WebCheckActivity"
+            android:name="com.bkwinners.ksnet.dpt.ks03.pay.httpcomunity.WebCheckActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent">
@@ -239,7 +239,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mtouch.ksnet.dpt.action.PayResultActivity"
+            android:name="com.bkwinners.ksnet.dpt.action.PayResultActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent">

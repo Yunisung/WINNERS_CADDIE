@@ -2,7 +2,7 @@ package com.pswseoul.comunity.fcm;
 
 import android.util.Log;
 
-import com.mtouch.ksnet.dpt.ks03.pay.ksnet.KSNETStatus;
+import com.bkwinners.ksnet.dpt.ks03.pay.ksnet.KSNETStatus;
 //import com.google.firebase.iid.FirebaseInstanceId;
 //import com.google.firebase.iid.FirebaseInstanceIdService;
 
