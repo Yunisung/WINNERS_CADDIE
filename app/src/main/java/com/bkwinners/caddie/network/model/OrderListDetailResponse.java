@@ -1,8 +1,9 @@
 package com.bkwinners.caddie.network.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class OrderListDetailResponse extends Response{
+public class OrderListDetailResponse extends Response implements Serializable {
 
     private ArrayList<OrderDetail> list;
 

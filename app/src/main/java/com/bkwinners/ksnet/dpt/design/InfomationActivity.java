@@ -93,9 +93,9 @@ public class InfomationActivity extends AppCompatActivity {
         distMailTextView.setText(SharedPreferenceUtil.getData(this, "distEmail"));
 
         //PYS : 고객센터 정보 추가
-        agencyNameTextView.setText("부국위너스");
+        agencyNameTextView.setText("건흥페이먼츠");
         agencyNumberTextView.setText("675-86-00152");
-        agencyCeoTextView.setText("권규미");
+        agencyCeoTextView.setText("이득명");
         agencyAddressTextView.setText("부산광역시 해운대구 센텀중앙로 97 A동 2510호");
         agencyCallTextView.setText("1644-1109");
         agencyMailTextView.setText("bukook@bkwinners.com");

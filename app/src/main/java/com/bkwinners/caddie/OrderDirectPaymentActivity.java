@@ -40,7 +40,7 @@ import retrofit2.Callback;
 import com.bkwinners.caddie.R;
 import com.bkwinners.caddie.BuildConfig;
 
-public class OrderDirectPaymentActivity extends AppCompatActivity {
+public class OrderDirectPaymentActivity extends DefaultActivity {
 
 
 

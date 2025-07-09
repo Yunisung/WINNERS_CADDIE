@@ -7,7 +7,7 @@ import android.os.Handler;
 
 import com.bkwinners.caddie.databinding.ActivityLoading2Binding;
 
-public class LoadingActivity extends AppCompatActivity {
+public class LoadingActivity extends DefaultActivity {
 
     private ActivityLoading2Binding binding;
 

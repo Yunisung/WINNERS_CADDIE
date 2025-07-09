@@ -58,6 +58,12 @@ public class SharedPreferenceUtil {
 
     public static void putData(Context context, String key, String value){
         SharedPreferences pref = context.getSharedPreferences(KEY, Context.MODE_PRIVATE);
+
+        if(key.equals("tmnId") || key.equals("serial")) {
+
+        }
+
+
         pref.edit().putString(key,value).commit();
     }
 

@@ -1,8 +1,9 @@
 package com.bkwinners.caddie.network.model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class Response {
+public class Response implements Serializable {
     private String resultCd;
     private String resultMsg;
     private HashMap<String, Object> data;

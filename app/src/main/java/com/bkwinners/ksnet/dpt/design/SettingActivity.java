@@ -12,8 +12,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bkwinners.caddie.MainActivity;
 import com.bkwinners.caddie.TempActivity;
+import com.bkwinners.caddie.auth.LoginActivity;
+import com.bkwinners.caddie.auth.MchtApplyActivity;
+import com.bkwinners.caddie.auth.MchtApplyInfo2Activity;
+import com.bkwinners.caddie.network.CaddieAPIService;
 import com.bkwinners.caddie.network.NetworkManager;
+import com.bkwinners.caddie.network.model.Response;
 import com.bkwinners.ksnet.dpt.MainApplication;
 import com.bkwinners.ksnet.dpt.design.util.MtouchDialog;
 import com.bkwinners.ksnet.dpt.design.util.SharedPreferenceUtil;
@@ -24,6 +30,11 @@ import com.bkwinners.ksnet.dpt.ks03.pay.ksnet.CyrexNetworkStatus;
 import com.bkwinners.caddie.BuildConfig;
 import com.bkwinners.caddie.R;
 import com.nordicsemi.nrfUARTv2.UartService;
+
+import java.util.HashMap;
+
+import retrofit2.Call;
+import retrofit2.Callback;
 
 
 public class SettingActivity extends DeviceCheckActivity {
@@ -40,6 +51,8 @@ public class SettingActivity extends DeviceCheckActivity {
     private Button resetButton;
     private Button btConnectSettingButton;
     private View connectSettingView;
+
+    private CaddieAPIService caddieAPIService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +78,7 @@ public class SettingActivity extends DeviceCheckActivity {
         mchtNameTextView = findViewById(R.id.mchtNameTextView);
         bizNumberTextView = findViewById(R.id.bizNumberTextView);
         printerSearchButton = findViewById(R.id.printerSearchButton);
-        readerSearchButton = findViewById(R.id.readerSearchButton);
+        //readerSearchButton = findViewById(R.id.readerSearchButton);
         resetButton = findViewById(R.id.resetButton);
         btConnectSettingButton = findViewById(R.id.btConnectSettingButton);
         connectSettingView = findViewById(R.id.connectSettingView);
@@ -84,14 +97,13 @@ public class SettingActivity extends DeviceCheckActivity {
             msg.setData(bundle);
             mHandler.sendMessage(msg);
         });
-        readerSearchButton.setOnClickListener(v->{
-            SharedPreferenceUtil.putData(this, Constants.KEY_MAC_ADDRESS,"NONE");
-            startActivityForResult(new Intent(this, DeviceRegistActivity.class), REQUEST_CODE_REGIST_ACTIVITY);
-        });
+//        readerSearchButton.setOnClickListener(v->{
+//            SharedPreferenceUtil.putData(this, Constants.KEY_MAC_ADDRESS,"NONE");
+//            startActivityForResult(new Intent(this, DeviceRegistActivity.class), REQUEST_CODE_REGIST_ACTIVITY);
+//        });
 
         resetButton.setOnClickListener(v->{
             new MtouchDialog(this, vv->{
-                SharedPreferenceUtil.clearData(this);
                 SharedPreferenceUtil.clearData(this);
                 if(NetworkManager.cookieJar!=null){
                     NetworkManager.cookieJar.clear();
@@ -155,5 +167,7 @@ public class SettingActivity extends DeviceCheckActivity {
         bizNumberTextView.setText(SharedPreferenceUtil.getData(this, "identity"));
 
         connectSettingView.setSelected(SharedPreferenceUtil.getData(this, Constants.KEY_KEEP_CONNECTION, "false").equals("true"));
+        caddieAPIService = NetworkManager.getAPIService(getApplicationContext());
     }
+
 }

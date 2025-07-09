@@ -31,7 +31,7 @@ import android.widget.Toast;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.gun0912.tedpermission.PermissionListener;
-import com.gun0912.tedpermission.TedPermission;
+import com.gun0912.tedpermission.normal.TedPermission;
 import com.ksnet.interfaces.Approval;
 import com.bkwinners.caddie.BuildConfig;
 import com.bkwinners.caddie.R;
@@ -106,11 +106,8 @@ import static com.bkwinners.ksnet.dpt.action.process.values.menuStatus.MESSAGE_R
  */
 
 public class PayResultActivity extends Activity implements DefineFuction, BlueToothCompleteListener, View.OnClickListener {
-
-    private Realm realm = Realm.getDefaultInstance();
-
     public final String TAG = "BTJYP";
-
+    private Realm realm = Realm.getDefaultInstance();
     public Handler retryHandler = new Handler();
     public Runnable retryRunnable = new Runnable() {
         @Override
@@ -2072,7 +2069,7 @@ public class PayResultActivity extends Activity implements DefineFuction, BlueTo
     @TargetApi(Build.VERSION_CODES.M)
     private void checkPhonePermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            TedPermission.with(this)
+            TedPermission.create()
                     .setPermissionListener(permissionlistener)
                     .setRationaleTitle(R.string.rationale_title)
                     .setRationaleMessage(R.string.rationale_message)

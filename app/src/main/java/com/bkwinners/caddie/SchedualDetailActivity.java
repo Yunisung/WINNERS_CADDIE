@@ -12,7 +12,7 @@ import com.bkwinners.caddie.databinding.ActivitySchedualDetailBinding;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class SchedualDetailActivity extends AppCompatActivity {
+public class SchedualDetailActivity extends DefaultActivity {
 
     private ActivitySchedualDetailBinding binding;
 

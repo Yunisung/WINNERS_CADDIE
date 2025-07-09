@@ -19,7 +19,7 @@ import java.util.Map;
 import com.bkwinners.caddie.R;
 import com.bkwinners.caddie.BuildConfig;
 
-public class SchedualCompleActivity extends AppCompatActivity {
+public class SchedualCompleActivity extends DefaultActivity {
 
     private ActivitySchedualCompleBinding binding;
 

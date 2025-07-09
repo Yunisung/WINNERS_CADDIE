@@ -143,6 +143,26 @@ public class DeviceCheckActivity extends AppCompatActivity implements AsyncTaskC
         super.onCreate(savedInstanceState);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         this.mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
+        View decorView = getWindow().getDecorView();
+
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+        );
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+            );
+        }
     }
 
 
@@ -193,13 +213,10 @@ public class DeviceCheckActivity extends AppCompatActivity implements AsyncTaskC
             Intent intent = new Intent(this, PermissionActivity.class);
             intent.putExtra("permission", new String[]{"android.permission.ACCESS_FINE_LOCATION",
                     "android.permission.ACCESS_COARSE_LOCATION",
-                    "android.permission.READ_EXTERNAL_STORAGE",
-                    "android.permission.WRITE_EXTERNAL_STORAGE",
-                    "android.permission.READ_PHONE_STATE",
                     "android.permission.GET_ACCOUNTS"});
             intent.putExtra("permission1", "- 포그라운드 위치 : BLE사용\n- 저장공간 : 앱설정 저장\n- 전화 : 휴대폰번호 전송\n");
             intent.putExtra("permission2", "- SMS : 문자메시지 발송\n- 주소록 :이메일 발송\n");
-            intent.putExtra("require", new String[]{"ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION", "WRITE_EXTERNAL_STORAGE", "READ_PHONE_STATE"});
+            intent.putExtra("require", new String[]{"ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION", "GET_ACCOUNTS"});
             startActivityForResult(intent, 0);
             return false;
         } else if (SharedPreferenceUtil.getData(this, "SECOND_VIEW", "false").equals("false")
@@ -208,13 +225,10 @@ public class DeviceCheckActivity extends AppCompatActivity implements AsyncTaskC
             Intent intent = new Intent(this, PermissionActivity.class);
             intent.putExtra("permission", new String[]{"android.permission.ACCESS_FINE_LOCATION",
                     "android.permission.ACCESS_COARSE_LOCATION",
-                    "android.permission.READ_EXTERNAL_STORAGE",
-                    "android.permission.WRITE_EXTERNAL_STORAGE",
-                    "android.permission.READ_PHONE_STATE",
                     "android.permission.GET_ACCOUNTS"});
             intent.putExtra("permission1", "- 포그라운드 위치 : BLE사용\n- 저장공간 : 앱설정 저장\n- 전화 : 휴대폰번호 전송\n");
             intent.putExtra("permission2", "- SMS : 문자메시지 발송\n- 주소록 :이메일 발송\n");
-            intent.putExtra("require", new String[]{"ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION", "WRITE_EXTERNAL_STORAGE", "READ_PHONE_STATE"});
+            intent.putExtra("require", new String[]{"ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION", "GET_ACCOUNTS"});
             startActivityForResult(intent, 1);
             return false;
         }
@@ -222,21 +236,15 @@ public class DeviceCheckActivity extends AppCompatActivity implements AsyncTaskC
         //사용중에 거부설정한 사람대상체크
         if(ContextCompat.checkSelfPermission(this,"android.permission.ACCESS_FINE_LOCATION") == PackageManager.PERMISSION_DENIED
                 || ContextCompat.checkSelfPermission(this,"android.permission.ACCESS_COARSE_LOCATION") == PackageManager.PERMISSION_DENIED
-                || ContextCompat.checkSelfPermission(this,"android.permission.READ_EXTERNAL_STORAGE") == PackageManager.PERMISSION_DENIED
-                || ContextCompat.checkSelfPermission(this,"android.permission.WRITE_EXTERNAL_STORAGE") == PackageManager.PERMISSION_DENIED
-                || ContextCompat.checkSelfPermission(this,"android.permission.READ_PHONE_STATE") == PackageManager.PERMISSION_DENIED
                 || ContextCompat.checkSelfPermission(this,"android.permission.GET_ACCOUNTS") == PackageManager.PERMISSION_DENIED
         ){
             Intent intent = new Intent(this, PermissionActivity.class);
             intent.putExtra("permission", new String[]{"android.permission.ACCESS_FINE_LOCATION",
                     "android.permission.ACCESS_COARSE_LOCATION",
-                    "android.permission.READ_EXTERNAL_STORAGE",
-                    "android.permission.WRITE_EXTERNAL_STORAGE",
-                    "android.permission.READ_PHONE_STATE",
                     "android.permission.GET_ACCOUNTS"});
             intent.putExtra("permission1", "- 포그라운드 위치 : BLE사용\n- 저장공간 : 앱설정 저장\n- 전화 : 휴대폰번호 전송\n");
             intent.putExtra("permission2", "- SMS : 문자메시지 발송\n- 주소록 :이메일 발송\n");
-            intent.putExtra("require", new String[]{"ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION", "WRITE_EXTERNAL_STORAGE", "READ_PHONE_STATE"});
+            intent.putExtra("require", new String[]{"ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION", "GET_ACCOUNTS"});
             startActivityForResult(intent, 1);
             return false;
         }

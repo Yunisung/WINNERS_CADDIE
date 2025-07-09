@@ -3,7 +3,9 @@ package com.bkwinners.caddie.network.model;
 import com.bkwinners.caddie.data.PayData;
 import com.bkwinners.caddie.data.WidgetData;
 
-public class OrderPayResponse extends Response{
+import java.io.Serializable;
+
+public class OrderPayResponse extends Response implements Serializable {
 
     private PayData pay;
     private WidgetData widget;

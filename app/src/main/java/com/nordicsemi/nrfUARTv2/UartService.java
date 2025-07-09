@@ -255,7 +255,7 @@ public class UartService extends Service {
 
                 Intent notificationIntent = new Intent(this, UartService.class);
                 notificationIntent.putExtra(KEY_ACTION,ACTION_CONNECT);
-                PendingIntent pendingIntent = PendingIntent.getService(this, 0, notificationIntent, 0);
+                PendingIntent pendingIntent = PendingIntent.getService(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE);
 
 
                 notification = new NotificationCompat.Builder(this, CHANNEL_ID)

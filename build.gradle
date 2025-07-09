@@ -4,22 +4,23 @@ buildscript {
     
     repositories {
         google()
-//        maven {
-//            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
-//
-//        }
+        jcenter()
+        maven {
+            url 'https://oss.jfrog.org/artifactory/oss-snapshot-local'
+
+        }
         maven {
             url "https://jitpack.io"
         }
-        jcenter()
+
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.1'
+        classpath 'com.android.tools.build:gradle:8.1.0'
         classpath 'com.google.gms:google-services:4.3.4'
 
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-        //classpath "io.realm:realm-gradle-plugin:6.2.0-SNAPSHOT"
+//        classpath "io.realm:realm-gradle-plugin:6.2.0-SNAPSHOT"
         classpath "io.realm:realm-gradle-plugin:10.6.0"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -34,23 +35,10 @@ allprojects {
         maven {
             url "https://jitpack.io"
         }
-//        maven {
-//            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
-//        }
+        maven {
+            url 'https://oss.jfrog.org/artifactory/oss-snapshot-local'
+        }
     }
-}
-
-
-ext {
-    compileSdkVersion = 26
-    buildToolsVersion = '26.0.2'
-    minSdkVersion = 14
-    targetSdkVersion = compileSdkVersion
-
-    supportLibVersion = '27.0.2'
-
-    versionCode = 128
-    versionName = '1.2.8'
 }
 
 

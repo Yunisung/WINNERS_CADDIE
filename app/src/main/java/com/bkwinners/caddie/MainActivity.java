@@ -42,6 +42,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -54,9 +55,6 @@ import static com.bkwinners.ksnet.dpt.ks03.pay.ksnet.CyrexNetworkStatus.NETWORK_
 import static com.bkwinners.ksnet.dpt.ks03.pay.ksnet.CyrexNetworkStatus.NETWORK_SERVER_SEND;
 import static com.bkwinners.ksnet.dpt.ks03.pay.ksnet.CyrexNetworkStatus.TEST;
 import static com.bkwinners.ksnet.dpt.ks03.pay.ksnet.CyrexNetworkStatus.menu_status;
-
-import com.bkwinners.caddie.R;
-import com.bkwinners.caddie.BuildConfig;
 
 public class MainActivity extends DeviceCheckActivity {
 
@@ -176,7 +174,6 @@ public class MainActivity extends DeviceCheckActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loadingDialog = new MtouchLoadingDialog(this);
-
         bindViews();
         caddieInit();
 //        init();
@@ -252,17 +249,25 @@ public class MainActivity extends DeviceCheckActivity {
                 try {
                     if (response.isSuccessful()) {
                         if (response.body().isSuccess()) {
+                            //여기서 암호화로 보내주기
                             String tmnId = (String) response.body().getData().get("tmnId");
                             String serial = (String) response.body().getData().get("serial");
                             String mchtId = (String) response.body().getData().get("mchtId");
                             ccName = (String) response.body().getData().get("ccName");
 
-                            SharedPreferenceUtil.putData(MainActivity.this, "tmnId", tmnId);
-                            SharedPreferenceUtil.putData(MainActivity.this, "serial", serial);
-                            SharedPreferenceUtil.putData(MainActivity.this, "mchtId", mchtId);
-                            SharedPreferenceUtil.putData(MainActivity.this, "ccName", ccName);
+                            //토큰비교추가
+                            String token = (String) response.body().getData().get("token");
+                            if(!token.equals((String) map.get("token"))) {
+                                SharedPreferenceUtil.removeData(MainActivity.this, Constants.KEY_AUTO_LOGIN);
+                                new MtouchDialog(MainActivity.this, v -> finish()).setTitleText("알림").setContentText("잘못된 접근입니다").show();
+                            } else {
+                                SharedPreferenceUtil.putData(MainActivity.this, "tmnId", tmnId);
+                                SharedPreferenceUtil.putData(MainActivity.this, "serial", serial);
+                                SharedPreferenceUtil.putData(MainActivity.this, "mchtId", mchtId);
+                                SharedPreferenceUtil.putData(MainActivity.this, "ccName", ccName);
 
-                            init();
+                                init();
+                            }
                         } else {
                             String resultMsg = response.body().getResultMsg();
                             SharedPreferenceUtil.removeData(MainActivity.this, Constants.KEY_AUTO_LOGIN);

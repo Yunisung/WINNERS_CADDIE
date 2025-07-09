@@ -27,7 +27,7 @@ import java.util.List;
 import com.bkwinners.caddie.R;
 import com.bkwinners.caddie.BuildConfig;
 
-public class SchedualApplyActivity extends AppCompatActivity {
+public class SchedualApplyActivity extends DefaultActivity {
 
     private ActivitySchedualApplyBinding binding;
 

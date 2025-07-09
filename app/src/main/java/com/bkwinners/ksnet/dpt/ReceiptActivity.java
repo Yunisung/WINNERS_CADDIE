@@ -571,7 +571,7 @@ public class ReceiptActivity extends AppCompatActivity {
 
 
         HashMap<String, Object> data = new HashMap<>();
-        data.put("title", "(주)부국위너스");
+        data.put("title", "(주)건흥페이먼츠");
         data.put("from", "0517516422");
         data.put("ttl", "0");
 

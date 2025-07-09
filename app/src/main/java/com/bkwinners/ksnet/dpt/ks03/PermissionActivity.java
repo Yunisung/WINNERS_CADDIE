@@ -8,10 +8,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gun0912.tedpermission.PermissionListener;
-import com.gun0912.tedpermission.TedPermission;
 
 import com.bkwinners.caddie.BuildConfig;
 import com.bkwinners.caddie.R;
+import com.gun0912.tedpermission.normal.TedPermission;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -85,7 +85,7 @@ public class PermissionActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.permission2)).setText(this.permission2);
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                TedPermission.with(PermissionActivity.this).setPermissionListener(permissionListener).setDeniedMessage("권한 거부시 [애플리케이션 정보] > [권한]에서 허용설정 바랍니다.").setPermissions(permission).check();
+                TedPermission.create().setPermissionListener(permissionListener).setDeniedMessage("권한 거부시 [애플리케이션 정보] > [권한]에서 허용설정 바랍니다.").setPermissions(permission).check();
             }
         });
         this.requireCheck = true;

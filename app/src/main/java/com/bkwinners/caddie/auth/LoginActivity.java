@@ -2,6 +2,7 @@ package com.bkwinners.caddie.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,6 +43,14 @@ public class LoginActivity extends DefaultActivity {
 //        setContentView(R.layout.activity_sms);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        View decorView = getWindow().getDecorView();
+
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+        );
 
         init();
         initView();

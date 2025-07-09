@@ -143,9 +143,9 @@ public class WebCheckActivity extends Activity {
 
     private SweetAlertDialog sweetAlertDialog;
 
-    String tmnId = "TMN000001";
-    String serial = "000001";
-    String appId = "com.mtouch.ksr03.pay";
+    String tmnId = "";
+    String serial = "";
+    String appId = "";
     String mchtId = "";
     String version = "";
     String telNo = "";

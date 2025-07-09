@@ -34,7 +34,7 @@ import java.util.Date;
 import com.bkwinners.caddie.R;
 import com.bkwinners.caddie.BuildConfig;
 
-public class OrderActivity extends AppCompatActivity {
+public class OrderActivity extends DefaultActivity {
 
     public static final int REQUEST_CODE = 1000;
 

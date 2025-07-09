@@ -31,7 +31,7 @@ import java.util.Map;
 import com.bkwinners.caddie.R;
 import com.bkwinners.caddie.BuildConfig;
 
-public class SchedualActivity extends AppCompatActivity {
+public class SchedualActivity extends DefaultActivity {
 
     private static final int REQUEST_DETAIL = 2000;
     private static final int REQUEST_APPLY = 3000;

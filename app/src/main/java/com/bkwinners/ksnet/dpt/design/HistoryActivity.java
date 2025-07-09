@@ -304,7 +304,8 @@ public class HistoryActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<OrderListResponse> call, Throwable t) {
                 String resultMsg = getString(R.string.network_error_msg);
-                new MtouchDialog(HistoryActivity.this, v -> finish()).setTitleText("알림").setContentText(getString(R.string.network_error_msg)).show();
+                String error = t.toString();
+                new MtouchDialog(HistoryActivity.this, v -> finish()).setTitleText("알림").setContentText(error).show();
             }
         });
     }

@@ -8,11 +8,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bkwinners.caddie.DefaultActivity;
 import com.bkwinners.caddie.R;
 import com.bkwinners.ksnet.dpt.design.OldMainActivity;
 import com.bkwinners.ksnet.dpt.design.util.SharedPreferenceUtil;
 
-public class SignUpCompleteActivity extends AppCompatActivity {
+public class SignUpCompleteActivity extends DefaultActivity {
 
     // Content View Elements
 

@@ -2,6 +2,7 @@ package com.bkwinners.caddie.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
@@ -20,7 +21,10 @@ import com.bkwinners.caddie.network.NetworkManager;
 import com.bkwinners.ksnet.dpt.design.util.MtouchDialog;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Logger;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 
@@ -104,7 +108,7 @@ public class AuthSMSActivity extends DefaultActivity {
                     @Override
                     public void onResponse(Call<com.bkwinners.caddie.network.model.Response> call, retrofit2.Response<com.bkwinners.caddie.network.model.Response> response) {
                         hideLoading();
-                        if(response.isSuccessful()){
+                        if(response.isSuccessful() && response.body() != null){
                             if(response.body().isSuccess()) {
                                 Toast.makeText(AuthSMSActivity.this, "인증번호가 전송되었습니다.", Toast.LENGTH_SHORT).show();
                                 binding.authNumberEditText.requestFocus();
@@ -115,6 +119,8 @@ public class AuthSMSActivity extends DefaultActivity {
                                 Toast.makeText(AuthSMSActivity.this, response.body().getResultMsg(), Toast.LENGTH_SHORT).show();
                             }
 
+                        } else {
+                            Toast.makeText(AuthSMSActivity.this, "통신오류", Toast.LENGTH_SHORT).show();
                         }
                     }
 
