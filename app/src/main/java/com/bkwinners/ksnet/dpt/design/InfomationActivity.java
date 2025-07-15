@@ -98,7 +98,7 @@ public class InfomationActivity extends AppCompatActivity {
         agencyCeoTextView.setText("이득명");
         agencyAddressTextView.setText("부산광역시 해운대구 센텀중앙로 97 A동 2510호");
         agencyCallTextView.setText("1644-1109");
-        agencyMailTextView.setText("bukook@bkwinners.com");
+        agencyMailTextView.setText("ghpay@ghpayments.co.kr");
 
     }
 }
